@@ -1,21 +1,36 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface PostListProps {
   hasNavigation?: boolean;
 }
 
+type TabType = "all" | "my";
+
 export default function PostList({ hasNavigation = true }: PostListProps) {
+  const [activeTab, setActiveTab] = useState<TabType>("all");
   return (
     <>
       {hasNavigation && (
         <div className="post_navigation">
-          <div className="post_navigation-active">전체 글</div>
-          <div className="">나의 글</div>
+          <div
+            role="presentation"
+            onClick={() => setActiveTab("all")}
+            className={activeTab === "all" ? "post_navigation-active" : ""}
+          >
+            전체 글
+          </div>
+          <div
+            onClick={() => setActiveTab("my")}
+            className={activeTab === "my" ? "post_navigation-active" : ""}
+          >
+            나의 글
+          </div>
         </div>
       )}
       <div className="post_list">
         {[...Array(10)].map((e, index) => (
-          <Link to={`/posts/${index}`}>
+          <Link to={`/posts/${index}`} key={index}>
             <div key={index} className="post_box">
               <div className="post_profile-box">
                 <div className="post_profile"></div>
@@ -27,7 +42,12 @@ export default function PostList({ hasNavigation = true }: PostListProps) {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
                 obcaecati quaerat recusandae alias aspernatur debitis illum
                 animi explicabo? In voluptate molestias eos neque nulla
-                asperiores distinctio delectus! Minus, illum asperiores.
+                asperiores distinctio delectus! Minus, illum asperiores. Lorem
+                ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+                obcaecati quaerat recusandae alias aspernatur debitis illum
+                animi explicabo? In voluptate molestias eos neque nulla
+                asperiores distinctio delectus! Minus, illum asperiores. Lorem
+                ipsum, dolor sit amet consectetur adipisicing elit. Nobis
               </div>
               <div className="post_utils-box">
                 <div className="post_delete">삭제</div>
