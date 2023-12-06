@@ -226,6 +226,8 @@ footer a:hover {
 .profile_logout {
   color: gray;
   font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .profile_logout:hover,
@@ -390,7 +392,7 @@ input:checked + .carousel_slide-container .nav label {
   max-width: 680px;
 }
 
-.form .from_block {
+.form .form_block {
   margin-top: 20px;
   width: 100%;
 }
@@ -417,4 +419,46 @@ input:checked + .carousel_slide-container .nav label {
 .form .form_btn-submit:hover,
 .form .form_btn-submit :focus {
   background-color: #1945a4;
+}
+
+/* 로그인 폼 */
+.form-lg {
+  min-height: 70vh;
+  margin-top: 10vh;
+}
+
+.form_title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.form_link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: gray;
+}
+
+.form_link:hover,
+.form_link:focus {
+  color: black;
+}
+
+.form_error {
+  color: red;
+}
+
+/* loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 5px solid #2563eb;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: rotation 1s linear infinite;
 }
