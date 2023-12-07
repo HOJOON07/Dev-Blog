@@ -187,6 +187,24 @@ footer a:hover {
   color: gray;
 }
 
+.post_no-post {
+  padding: 24px;
+  text-align: center;
+  color: gray;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+}
+.post_text-pre_wrap {
+  white-space: pre-wrap;
+}
+.post_category {
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: #f2f2f2;
+  padding: 0px 4px;
+  border-radius: 10px;
+  font-size: 12px;
+}
 /* profile */
 .profile_box {
   display: flex;
@@ -445,6 +463,14 @@ input:checked + .carousel_slide-container .nav label {
 
 .form_error {
   color: red;
+}
+
+.form select {
+  border: 1px solid #f2f2f2;
+  max-width: 680px;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 0.3rem;
 }
 
 /* loader */

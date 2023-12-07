@@ -1,5 +1,5 @@
 import Router from "./components/Router";
-import { app } from "firebaseApp";
+import { app, db } from "firebaseApp";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
@@ -29,7 +29,7 @@ function App() {
       setInit(true);
     });
   }, [auth]);
-  console.log(auth);
+
   return (
     <>
       <ToastContainer></ToastContainer>
