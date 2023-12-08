@@ -62,6 +62,12 @@ footer a:hover {
   color: black;
 }
 
+.footer_theme {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
 /* post navigation */
 .post_navigation {
   display: flex;
@@ -487,4 +493,49 @@ input:checked + .carousel_slide-container .nav label {
   border-radius: 50%;
   z-index: 9999;
   animation: rotation 1s linear infinite;
+}
+
+/* 화이트 다크 모드 */
+
+.white {
+  transition: all 0.25s linear;
+  background-color: white;
+}
+
+.dark {
+  transition: all 0.25s linear;
+  background-color: #1e2937;
+  min-height: 100vh;
+}
+
+.dark a,
+.dark .form label,
+.dark .post_delete,
+.dark .profile_logout,
+.dark .form_title,
+.dark .post_navigation-active,
+.dark .post_title,
+.dark .post_author-name,
+.dark .footer_theme-btn,
+.dark .profile_name {
+  color: white;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark .post_text,
+.dark .post_text-pre_wrap,
+.dark .profile_email,
+.dark .post_delete,
+.dark .form_block {
+  color: lightgray;
+}
+
+.dark .form_error {
+  color: #ff6a71;
+}
+
+.dark footer,
+.dark header {
+  background-color: #111827;
 }
