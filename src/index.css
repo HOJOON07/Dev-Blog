@@ -494,6 +494,96 @@ input:checked + .carousel_slide-container .nav label {
   z-index: 9999;
   animation: rotation 1s linear infinite;
 }
+/* 코멘트 */
+
+.comments {
+  width: 100%;
+}
+
+.comments_form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.comments_form textarea {
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  --webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comments_form .form_block {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.comments_form .form_btn-submit {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.form_block-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.comments_form .form_btn-submit:hover,
+.comments_form .form_btn-submit:focus {
+  background-color: #1954a4;
+}
+
+.comments_list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.comments_box {
+  padding: 12px 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.comments_profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+.comments_email {
+  font-weight: 500;
+}
+.comments_data {
+  color: gray;
+}
+.comments_delete {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.comments_text {
+  font-size: 14px;
+  padding-top: 4px;
+}
+.comments_delete:hover,
+.comments_delete:focus {
+  color: black;
+}
 
 /* 화이트 다크 모드 */
 
@@ -517,7 +607,8 @@ input:checked + .carousel_slide-container .nav label {
 .dark .post_title,
 .dark .post_author-name,
 .dark .footer_theme-btn,
-.dark .profile_name {
+.dark .profile_name,
+.dark .comments_list {
   color: white;
 }
 
@@ -527,7 +618,9 @@ input:checked + .carousel_slide-container .nav label {
 .dark .post_text-pre_wrap,
 .dark .profile_email,
 .dark .post_delete,
-.dark .form_block {
+.dark .form_block,
+.dark .comments_date,
+.dark .comments_delete {
   color: lightgray;
 }
 
@@ -538,4 +631,9 @@ input:checked + .carousel_slide-container .nav label {
 .dark footer,
 .dark header {
   background-color: #111827;
+}
+
+.dark .comments_delete:hover,
+.dark .comments_delete:focus {
+  color: white;
 }
