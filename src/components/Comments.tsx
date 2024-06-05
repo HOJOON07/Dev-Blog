@@ -5,46 +5,6 @@ import { db } from "firebaseApp";
 import AuthContext from "context/AuthContext";
 import { toast } from "react-toastify";
 import { log } from "console";
-
-// const Comments_MOCK = [
-//   {
-//     id: 1,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-//   {
-//     id: 2,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-//   {
-//     id: 3,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-//   {
-//     id: 4,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-//   {
-//     id: 5,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-//   {
-//     id: 6,
-//     email: "ghwns107@naver.com",
-//     content: "댓글입니다. 1",
-//     createdAt: "2023-10-10",
-//   },
-// ];
-
 interface CommentProps {
   post: PostProps;
   getPost: (id: string) => void;
